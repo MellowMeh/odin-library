@@ -63,16 +63,16 @@ body {
 
 .container {
     padding: 10px 0px;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    row-gap: 10px;
+   display: grid;
+   justify-items: center;
+   grid-row-gap: 25px;
+   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 }
 
 .card {
-    background-color: black;
-    width: 90svw;
-    height: 30svh;
+    background-color: purple;
+    width: 350px;
+    height: 400px;
 }
 
 .footer {
