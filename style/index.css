@@ -42,6 +42,7 @@ textarea:focus, input:focus {
     --default-font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
     --dark-grey: #1b1b1b;
     --light-grey: #80868B;
+    --blue: #4285F4;
     --white: whitesmoke;
 }
 
@@ -107,7 +108,12 @@ body {
 .footer {
     position: sticky;
     bottom: 0;
-    height: 5cap;
-    background-color: var(--dark-grey);
+    height: calc(var(--default-font-size)*1.5);
+    background-color: var(--blue);
     border-top: 1px solid var(--light-grey);
+    font-size: calc(var(--default-font-size)*1.1);
+    font-family: var(--default-font-family);
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
 }
