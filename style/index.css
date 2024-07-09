@@ -40,3 +40,44 @@ textarea:focus, input:focus {
     --default-line-height: 1.65;
     --default-font-weight: normal;
 }
+
+/*Webpage Specific Rules*/
+body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    height: 5svh;
+    background-color: green;
+    display: flex;
+  }
+
+.main {
+    background-color: blue;
+    height: auto;
+}
+
+.container {
+    padding: 10px 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 10px;
+}
+
+.card {
+    background-color: black;
+    width: 90svw;
+    height: 30svh;
+}
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    background-color: red;
+    height: 5cap;
+}
