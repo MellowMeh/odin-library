@@ -16,7 +16,6 @@ let addBookButton = document.querySelector('.footer');
 let cardContainer = document.querySelector('.container'); 
 
 function displayInput() {
-    //do stuff here
     addBookButton.addEventListener('click', () => {
         let card = document.createElement('div');
             card.setAttribute('class', 'card');
@@ -58,6 +57,10 @@ function displayInput() {
             readLabelline.setAttribute('class', 'labelline');
             readLabelline.textContent = 'read (y/n)'
 
+        let submitButtonArea = document.createElement('div');
+            submitButtonArea.setAttribute('id', 'submit-button')
+            submitButtonArea.textContent = 'submit';
+
         cardContainer.appendChild(card);
             card.appendChild(titleEntryArea)
                 titleEntryArea.appendChild(titleInput);
@@ -71,6 +74,7 @@ function displayInput() {
             card.appendChild(readEntryArea);
                 readEntryArea.appendChild(readInput);
                 readEntryArea.appendChild(readLabelline);
+            card.appendChild(submitButtonArea);
     })
 }
 

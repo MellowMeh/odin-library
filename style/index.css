@@ -149,6 +149,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -217,6 +218,20 @@ input:valid + .labelline {
     font-size: calc(var(--default-font-size)*.55);
     transform: translate(calc(var(--default-font-size)*0.5), calc(var(--default-font-size)*-0.03));
     z-index: 1111;
+}
+
+#submit-button {
+    height: auto;
+    width: 35%;
+    margin: 10px 0px 0px 0px;
+    padding: 5px;
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: var(--default-font-family);
+    font-size: calc(var(--default-font-size)*0.5);
+    background-color: var(--blue);
+    border: 1px solid var(--white);
+    text-align: center;
 }
 
 .footer {
