@@ -15,7 +15,7 @@ let bookThree = new Book('book three', 'anonymous', '2,000 pages', 'has not been
 let addBookButton = document.querySelector('.footer');
 let cardContainer = document.querySelector('.container'); 
 
-function addBookToLibrary() {
+function displayInput() {
     //do stuff here
     addBookButton.addEventListener('click', () => {
         let card = document.createElement('div');
@@ -74,4 +74,4 @@ function addBookToLibrary() {
     })
 }
 
-addBookToLibrary();
+displayInput();
