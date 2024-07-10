@@ -1,51 +1,61 @@
 const userLibrary = [];
 
-function Book(title, author, pages, read) {
+function Book(title, author, pages, genre) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.read = read;
+    this.genre = genre;
 };
 
 let addBookButton = document.querySelector('.footer');
 let cardContainer = document.querySelector('.container'); 
+let card;
+let submitButtonArea;
+let titleInput;
+let authorInput;
+let pagesInput;
+let genreInput;
+let titleEntryArea;
+let authorEntryArea
+let pagesEntryArea;
+let genreEntryArea;
 
 function displayInput() {
     addBookButton.addEventListener('click', () => {
-        let card = document.createElement('div');
+        card = document.createElement('div');
             card.setAttribute('class', 'card');
 
-        let titleEntryArea = document.createElement('div');
+        titleEntryArea = document.createElement('div');
             titleEntryArea.setAttribute('class', 'entry-area');
-        let authorEntryArea = document.createElement('div');
+        authorEntryArea = document.createElement('div');
             authorEntryArea.setAttribute('class', 'entry-area');
-        let pagesEntryArea = document.createElement('div');
+        pagesEntryArea = document.createElement('div');
             pagesEntryArea.setAttribute('class', 'entry-area')
-        let genreEntryArea = document.createElement('div');
+        genreEntryArea = document.createElement('div');
             genreEntryArea.setAttribute('class', 'entry-area');
 
-        let titleInput = document.createElement('input');
+        titleInput = document.createElement('input');
             titleInput.setAttribute('type', 'text');
             titleInput.required = true;
         let titleLabelline = document.createElement('div');
             titleLabelline.setAttribute('class', 'labelline');
             titleLabelline.textContent = 'book title'
 
-        let authorInput = document.createElement('input');
+        authorInput = document.createElement('input');
             authorInput.setAttribute('type', 'text');
             authorInput.required = true;
         let authorLabelline = document.createElement('div');
             authorLabelline.setAttribute('class', 'labelline');
             authorLabelline.textContent = 'author name'
 
-        let pagesInput = document.createElement('input');
+        pagesInput = document.createElement('input');
             pagesInput.setAttribute('type', 'text');
             pagesInput.required = true;
         let pagesLabelline = document.createElement('div');
             pagesLabelline.setAttribute('class', 'labelline');
             pagesLabelline.textContent = 'number of pages'
 
-        let genreInput = document.createElement('select');
+        genreInput = document.createElement('select');
             let defaultInput = document.createElement('option');
             let romanceInput = document.createElement('option');
                 romanceInput.textContent = 'romance';
@@ -61,9 +71,12 @@ function displayInput() {
             genreLabelline.setAttribute('class', 'labelline');
             genreLabelline.textContent = 'genre';
 
-        let submitButtonArea = document.createElement('div');
+        submitButtonArea = document.createElement('div');
             submitButtonArea.setAttribute('id', 'submit-button');
             submitButtonArea.textContent = 'submit';
+            submitButtonArea.addEventListener('click', () => {
+                getObjects();
+            })
 
         cardContainer.appendChild(card);
             card.appendChild(titleEntryArea)
@@ -85,7 +98,12 @@ function displayInput() {
                 genreInput.appendChild(scifiInput);
                 genreInput.appendChild(otherInput);
             card.appendChild(submitButtonArea);
-    })
+    });
+};
+
+let getObjects = () => {
+    const libraryBooks = new Book(titleInput.value, authorInput.value, pagesInput.value, genreInput.value);
+    console.log(libraryBooks);
 }
 
 displayInput();
