@@ -76,6 +76,7 @@ function displayInput() {
             submitButtonArea.textContent = 'submit';
             submitButtonArea.addEventListener('click', () => {
                 getObjects();
+                removeInputElements();
             })
 
         cardContainer.appendChild(card);
@@ -104,6 +105,15 @@ function displayInput() {
 let getObjects = () => {
     const libraryBooks = new Book(titleInput.value, authorInput.value, pagesInput.value, genreInput.value);
     console.log(libraryBooks);
+}
+
+
+let removeInputElements = () => {
+    card.removeChild(titleEntryArea);
+    card.removeChild(authorEntryArea);
+    card.removeChild(pagesEntryArea);
+    card.removeChild(genreEntryArea);
+    card.removeChild(submitButtonArea);
 }
 
 displayInput();
