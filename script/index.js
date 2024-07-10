@@ -26,8 +26,8 @@ function displayInput() {
             authorEntryArea.setAttribute('class', 'entry-area');
         let pagesEntryArea = document.createElement('div');
             pagesEntryArea.setAttribute('class', 'entry-area')
-        let readEntryArea = document.createElement('div');
-            readEntryArea.setAttribute('class', 'entry-area');
+        let genreEntryArea = document.createElement('div');
+            genreEntryArea.setAttribute('class', 'entry-area');
 
         let titleInput = document.createElement('input');
             titleInput.setAttribute('type', 'text');
@@ -50,15 +50,24 @@ function displayInput() {
             pagesLabelline.setAttribute('class', 'labelline');
             pagesLabelline.textContent = 'number of pages'
 
-        let readInput = document.createElement('input');
-            readInput.setAttribute('type', 'text');
-            readInput.required = true;
-        let readLabelline = document.createElement('div');
-            readLabelline.setAttribute('class', 'labelline');
-            readLabelline.textContent = 'read (y/n)'
+        let genreInput = document.createElement('select');
+            let defaultInput = document.createElement('option');
+            let romanceInput = document.createElement('option');
+                romanceInput.textContent = 'romance';
+            let thrillerInput = document.createElement('option');
+                thrillerInput.textContent = 'thriller';
+            let fantasyInput = document.createElement('option');
+                fantasyInput.textContent = 'fantasy';
+            let scifiInput = document.createElement('option');
+                scifiInput.textContent = 'sci-fi';
+            let otherInput = document.createElement('option');
+                otherInput.textContent = 'other';
+        let genreLabelline = document.createElement('div');
+            genreLabelline.setAttribute('class', 'labelline');
+            genreLabelline.textContent = 'genre';
 
         let submitButtonArea = document.createElement('div');
-            submitButtonArea.setAttribute('id', 'submit-button')
+            submitButtonArea.setAttribute('id', 'submit-button');
             submitButtonArea.textContent = 'submit';
 
         cardContainer.appendChild(card);
@@ -71,9 +80,15 @@ function displayInput() {
             card.appendChild(pagesEntryArea);
                 pagesEntryArea.appendChild(pagesInput);
                 pagesEntryArea.appendChild(pagesLabelline);
-            card.appendChild(readEntryArea);
-                readEntryArea.appendChild(readInput);
-                readEntryArea.appendChild(readLabelline);
+            card.appendChild(genreEntryArea);
+                genreEntryArea.appendChild(genreInput);
+                genreEntryArea.appendChild(genreLabelline);
+                genreInput.appendChild(defaultInput);
+                genreInput.appendChild(romanceInput);
+                genreInput.appendChild(thrillerInput);
+                genreInput.appendChild(fantasyInput);
+                genreInput.appendChild(scifiInput);
+                genreInput.appendChild(otherInput);
             card.appendChild(submitButtonArea);
     })
 }

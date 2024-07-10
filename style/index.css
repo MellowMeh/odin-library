@@ -163,7 +163,6 @@ input {
     position: relative;
     margin: 2.5%;
     color: transparent;
-    width: 95%;
     height: calc(var(--default-font-size)*2);
     outline: none;
     font-size: calc(var(--default-font-size)*0.75);
@@ -217,6 +216,36 @@ input:valid + .labelline {
     height: auto;
     font-size: calc(var(--default-font-size)*.55);
     transform: translate(calc(var(--default-font-size)*0.5), calc(var(--default-font-size)*-0.03));
+    z-index: 1111;
+}
+
+select {
+    background-color: var(--dark-grey);
+    height: calc(var(--default-font-size)*2.25);
+    outline: none;
+    font-size: calc(var(--default-font-size)*.75);
+    border-radius: 10px;
+    text-transform: capitalize;
+    font-weight: 100;
+    color: transparent;
+    padding: 0px calc(var(--default-font-size)*1.45);
+}
+
+select:valid {
+    color: var(--white);
+    border: 2px solid var(--white);
+    transition-duration: 1000ms;
+}
+
+select:valid + .labelline {
+    color: var(--white);
+    background-color: var(--dark-grey);
+    padding: 0px 5px;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    font-size: calc(var(--default-font-size)*.55);
+    transform: translate(calc(var(--default-font-size)*0.2), calc(var(--default-font-size)*-0.25));
     z-index: 1111;
 }
 
