@@ -35,7 +35,7 @@ textarea:focus, input:focus {
 /*Default CSS Custom Variables*/
 :root {
     --default-overflow-wrap: break-word;
-    --default-font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+    --default-font-size: clamp(1rem, 1rem + 2vw, 2rem);
     --default-max-inline-size: 66ch;
     --default-line-height: 1.65;
     --default-font-weight: normal;
