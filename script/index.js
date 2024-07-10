@@ -1,16 +1,11 @@
 const userLibrary = [];
 
 function Book(title, author, pages, read) {
-    //general constructor
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
 };
-
-let theHobbit = new Book('the hobbit', 'j.r.r. tolkien', '290 pages', 'already read')
-let bookTwo = new Book('book two', 'Nobody', '195 pages', 'has not been read yet');
-let bookThree = new Book('book three', 'anonymous', '2,000 pages', 'has not been read yet');
 
 let addBookButton = document.querySelector('.footer');
 let cardContainer = document.querySelector('.container'); 
@@ -94,3 +89,7 @@ function displayInput() {
 }
 
 displayInput();
+
+let theHobbit = new Book('the hobbit', 'j.r.r. tolkien', '290 pages', 'already read')
+let bookTwo = new Book('book two', 'Nobody', '195 pages', 'has not been read yet');
+let bookThree = new Book('book three', 'anonymous', '2,000 pages', 'has not been read yet');
