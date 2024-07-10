@@ -168,6 +168,7 @@ input {
     font-size: calc(var(--default-font-size)*0.75);
     border-radius: 10px;
     border: 2px solid var(--white);
+    padding: 20px;
     background: transparent;
     z-index: 1111;
 }
@@ -201,17 +202,15 @@ input:focus + .labelline {
 }
 
 input:valid {
-    color: var(--blue);
-    border: 1px solid var(--blue);
+    color: var(--white);
+    border: 2px solid var(--white);
     padding: 20px;
-    transition-duration: 1000ms;
 }
 
 input:valid + .labelline {
     color: var(--white);
-    background-color: var(--blue);
-    padding: 0px 5px;
-    border-radius: 10px;
+    background-color: var(--dark-grey);
+    padding: 0px;
     width: auto;
     height: auto;
     font-size: calc(var(--default-font-size)*.55);
