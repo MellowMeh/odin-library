@@ -19,9 +19,12 @@ let titleEntryArea;
 let authorEntryArea
 let pagesEntryArea;
 let genreEntryArea;
+let emptyCardCounter = 0;
 
 function displayInput() {
     addBookButton.addEventListener('click', () => {
+    if (emptyCardCounter < 1) {
+        emptyCardCounter = 1;
         card = document.createElement('div');
             card.setAttribute('class', 'card');
 
@@ -99,7 +102,7 @@ function displayInput() {
                 genreInput.appendChild(scifiInput);
                 genreInput.appendChild(otherInput);
             card.appendChild(submitButtonArea);
-    });
+    }});
 };
 
 let getObjects = () => {
@@ -114,6 +117,7 @@ let removeInputElements = () => {
     card.removeChild(pagesEntryArea);
     card.removeChild(genreEntryArea);
     card.removeChild(submitButtonArea);
+    emptyCardCounter = 0;
 }
 
 displayInput();
