@@ -104,10 +104,21 @@ body {
       width: auto;
   }
   
+  .dot {
+    height: calc(var(--default-font-size)*1.5);
+    width: calc(var(--default-font-size)*1.5);
+    background-color: var(--blue);
+    border: 2px solid var(--white);
+    border-radius: 50%;
+  }
+
   .account-icon img {
       border-radius: 25px;
       height: calc(var(--default-font-size)*1.5);
       width: auto;
+      position: absolute;
+      top: calc(var(--default-font-size)*.24);
+      right: calc(var(--default-font-size)*.44);
   }
 
 .main {
