@@ -142,8 +142,14 @@ body {
     overflow: hidden;
 }
 
+.entry-area {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
 input {
-    position: absolute;
+    position: relative;
     margin: 2.5%;
     color: transparent;
     width: 95%;
@@ -163,7 +169,7 @@ input {
     font-size: calc(var(--default-font-size)*.6);
     font-weight: 100;
     color: var(--light-grey);
-    padding: 0 15px;
+    padding: var(--default-font-size) 0px 0px var(--default-font-size);
     transition: 0.5s ease;
 ;}
 
@@ -176,10 +182,11 @@ input:focus {
 input:focus + .labelline {
     color: var(--white);
     background-color: var(--dark-grey);
+    padding: 0px;
     width: auto;
     height: auto;
     font-size: calc(var(--default-font-size)*.55);
-    transform: translate(15%, -150%);
+    transform: translate(calc(var(--default-font-size)*0.5), calc(var(--default-font-size)*-0.03));
     z-index: 1111;
 }
 
@@ -193,11 +200,12 @@ input:valid {
 input:valid + .labelline {
     color: var(--white);
     background-color: var(--blue);
+    padding: 0px 5px;
     border-radius: 10px;
     width: auto;
     height: auto;
     font-size: calc(var(--default-font-size)*.55);
-    transform: translate(5%, -150%);
+    transform: translate(calc(var(--default-font-size)*0.5), calc(var(--default-font-size)*-0.03));
     z-index: 1111;
 }
 

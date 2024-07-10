@@ -20,6 +20,10 @@ function addBookToLibrary() {
     addBookButton.addEventListener('click', () => {
         let card = document.createElement('div');
             card.setAttribute('class', 'card');
+        let titleEntryArea = document.createElement('div');
+            titleEntryArea.setAttribute('class', 'entry-area');
+        let authorEntryArea = document.createElement('div');
+            authorEntryArea.setAttribute('class', 'entry-area');
         let titleInput = document.createElement('input');
             titleInput.setAttribute('class', 'title-input');
             titleInput.setAttribute('type', 'text');
@@ -27,9 +31,20 @@ function addBookToLibrary() {
         let titleLabelline = document.createElement('div');
             titleLabelline.setAttribute('class', 'labelline');
             titleLabelline.textContent = 'book title'
+        let authorInput = document.createElement('input');
+            authorInput.setAttribute('class', 'title-input');
+            authorInput.setAttribute('type', 'text');
+            authorInput.required = true;
+        let authorLabelline = document.createElement('div');
+            authorLabelline.setAttribute('class', 'labelline');
+            authorLabelline.textContent = 'author name'
         cardContainer.appendChild(card);
-        card.appendChild(titleInput);
-        card.appendChild(titleLabelline);
+        card.appendChild(titleEntryArea)
+        titleEntryArea.appendChild(titleInput);
+        titleEntryArea.appendChild(titleLabelline);
+        card.appendChild(authorEntryArea);
+        authorEntryArea.appendChild(authorInput);
+        authorEntryArea.appendChild(authorLabelline);
     })
 }
 
