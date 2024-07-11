@@ -52,7 +52,7 @@ function displayInput() {
             authorLabelline.textContent = 'author name'
 
         pagesInput = document.createElement('input');
-            pagesInput.setAttribute('type', 'text');
+            pagesInput.setAttribute('type', 'number');
             pagesInput.required = true;
         let pagesLabelline = document.createElement('div');
             pagesLabelline.setAttribute('class', 'labelline');
@@ -124,13 +124,38 @@ let removeInputElements = () => {
 }
 
 let generateCustomCard = () => {
-    let customCardTitle = document.createElement('div');
-        customCardTitle.setAttribute('class', 'custom-card');
-        customCardTitle.textContent = libraryBooks.title;
-    let customCardAuthor = document.createElement('div');
-    let customCardPages = document.createElement('div');
+    let customCardContainer = document.createElement('div');
+        customCardContainer.setAttribute('class', 'custom-card-container');
+        card.appendChild(customCardContainer);
 
-    card.appendChild(customCardTitle);
+    let customCardImageContainer = document.createElement('div');
+        customCardImageContainer.setAttribute('class', 'custom-card-image-container');
+        if (libraryBooks.genre === 'romance') {
+            let romanceImage = document.createElement('img');
+            romanceImage.setAttribute('src', './image/fantasyimage.png');
+            let imageAttribution = document.createElement('div');
+                imageAttribution.setAttribute('class', 'image-attribution');
+                imageAttribution.textContent = 'Image by Judas from Pixabay'
+            customCardImageContainer.appendChild(romanceImage);
+            customCardImageContainer.appendChild(imageAttribution);
+        }
+        customCardContainer.appendChild(customCardImageContainer);
+
+    let customCardTextContainer = document.createElement('div');
+        customCardTextContainer.setAttribute('class', 'custom-card-text-container');
+        customCardContainer.appendChild(customCardTextContainer);
+    let customCardTitle = document.createElement('div');
+        customCardTitle.setAttribute('class', 'custom-card-title');
+        customCardTitle.textContent = libraryBooks.title;
+        customCardTextContainer.appendChild(customCardTitle);
+    let customCardAuthor = document.createElement('div');
+        customCardAuthor.setAttribute('class', 'custom-card-author');
+        customCardAuthor.textContent = libraryBooks.author;
+        customCardTextContainer.appendChild(customCardAuthor);
+    let customCardPages = document.createElement('div');
+        customCardPages.setAttribute('class', 'custom-card-pages');
+        customCardPages.textContent = (libraryBooks.pages + ' pages');
+        customCardTextContainer.appendChild(customCardPages);
 }
 
 displayInput();
