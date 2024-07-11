@@ -132,7 +132,7 @@ let generateCustomCard = () => {
         customCardImageContainer.setAttribute('class', 'custom-card-image-container');
         if (libraryBooks.genre === 'romance') {
             let romanceImage = document.createElement('img');
-            romanceImage.setAttribute('src', './image/fantasyimage.png');
+            romanceImage.setAttribute('src', './image/romanceimage.png');
             let imageAttribution = document.createElement('div');
                 imageAttribution.setAttribute('class', 'image-attribution');
                 imageAttribution.textContent = 'Image by Judas from Pixabay'
