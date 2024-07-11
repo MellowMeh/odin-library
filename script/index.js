@@ -80,6 +80,7 @@ function displayInput() {
             submitButtonArea.addEventListener('click', () => {
                 getObjects();
                 removeInputElements();
+                generateCustomCard();
             })
 
         cardContainer.appendChild(card);
@@ -105,8 +106,10 @@ function displayInput() {
     }});
 };
 
+let libraryBooks;
+
 let getObjects = () => {
-    const libraryBooks = new Book(titleInput.value, authorInput.value, pagesInput.value, genreInput.value);
+    libraryBooks = new Book(titleInput.value, authorInput.value, pagesInput.value, genreInput.value);
     console.log(libraryBooks);
 }
 
@@ -118,6 +121,16 @@ let removeInputElements = () => {
     card.removeChild(genreEntryArea);
     card.removeChild(submitButtonArea);
     emptyCardCounter = 0;
+}
+
+let generateCustomCard = () => {
+    let customCardTitle = document.createElement('div');
+        customCardTitle.setAttribute('class', 'custom-card');
+        customCardTitle.textContent = libraryBooks.title;
+    let customCardAuthor = document.createElement('div');
+    let customCardPages = document.createElement('div');
+
+    card.appendChild(customCardTitle);
 }
 
 displayInput();
