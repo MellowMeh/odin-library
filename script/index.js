@@ -130,14 +130,43 @@ let generateCustomCard = () => {
 
     let customCardImageContainer = document.createElement('div');
         customCardImageContainer.setAttribute('class', 'custom-card-image-container');
-        if (libraryBooks.genre === 'romance') {
-            let romanceImage = document.createElement('img');
-            romanceImage.setAttribute('src', './image/romanceimage.png');
-            let imageAttribution = document.createElement('div');
-                imageAttribution.setAttribute('class', 'image-attribution');
-                imageAttribution.textContent = 'Image by Judas from Pixabay'
-            customCardImageContainer.appendChild(romanceImage);
-            customCardImageContainer.appendChild(imageAttribution);
+        switch(libraryBooks.genre) {
+            case 'romance':
+                let romanceImage = document.createElement('img');
+                    romanceImage.setAttribute('src', './image/romanceimage.png');
+                let romanceImageAttribution = document.createElement('div');
+                    romanceImageAttribution.setAttribute('class', 'image-attribution');
+                    romanceImageAttribution.textContent = 'Image by Judas from Pixabay'
+                customCardImageContainer.appendChild(romanceImage);
+                customCardImageContainer.appendChild(romanceImageAttribution);
+                break;
+            case 'thriller':
+                let thrillerImage = document.createElement('img');
+                    thrillerImage.setAttribute('src', './image/thrillerimage.png');
+                let thrillerImageAttribution = document.createElement('div');
+                    thrillerImageAttribution.setAttribute('class', 'image-attribution');
+                    thrillerImageAttribution.textContent = 'Image by Judas from Pixabay'
+                customCardImageContainer.appendChild(thrillerImage);
+                customCardImageContainer.appendChild(thrillerImageAttribution);
+                break;
+            case 'fantasy':
+                let fantasyImage = document.createElement('img');
+                    fantasyImage.setAttribute('src', './image/fantasyimage.png');
+                let fantasyImageAttribution = document.createElement('div');
+                    fantasyImageAttribution.setAttribute('class', 'image-attribution');
+                    fantasyImageAttribution.textContent = 'Image by Judas from Pixabay'
+                customCardImageContainer.appendChild(fantasyImage);
+                customCardImageContainer.appendChild(fantasyImageAttribution);
+                break;
+            case 'sci-fi':
+                let scifiImage = document.createElement('img');
+                    scifiImage.setAttribute('src', './image/scifiimage.png');
+                let scifiImageAttribution = document.createElement('div');
+                    scifiImageAttribution.setAttribute('class', 'image-attribution');
+                    scifiImageAttribution.textContent = 'Image by Judas from Pixabay'
+                customCardImageContainer.appendChild(scifiImage);
+                customCardImageContainer.appendChild(scifiImageAttribution);
+                break;
         }
         customCardContainer.appendChild(customCardImageContainer);
 

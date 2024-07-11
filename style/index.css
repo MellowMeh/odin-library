@@ -273,7 +273,6 @@ select:valid + .labelline {
 }
 
 .custom-card-image-container {
-    position: relative;
     height: 100%;
     width: 100%;
 }
@@ -281,6 +280,7 @@ select:valid + .labelline {
 .image-attribution {
     position: absolute;
     bottom: 0;
+    right: 0;
     color: var(--light-grey);
     font-family: var(--default-font-family);
     font-size: calc(var(--default-font-size)*.25);
@@ -293,6 +293,7 @@ select:valid + .labelline {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    z-index: 1111;
 }
 
 .custom-card-title {
@@ -303,7 +304,7 @@ select:valid + .labelline {
     text-wrap: pretty;
     text-align: center;
     font-family: var(--default-font-family);
-    font-size: calc(var(--default-font-size)*1);
+    font-size: calc(var(--default-font-size)*1.25);
 }
 
 .custom-card-author {
@@ -314,7 +315,7 @@ select:valid + .labelline {
     text-wrap: pretty;
     text-align: center;
     font-family: var(--default-font-family);
-    font-size: calc(var(--default-font-size)*0.75);
+    font-size: calc(var(--default-font-size)*1);
 }
 
 .custom-card-pages {
@@ -324,7 +325,7 @@ select:valid + .labelline {
     text-transform: capitalize;
     text-wrap: pretty;
     font-family: var(--default-font-family);
-    font-size: calc(var(--default-font-size)*0.5);
+    font-size: calc(var(--default-font-size)*0.75);
 }
 
 .footer {
